@@ -9,8 +9,8 @@ terraform {
 
 provider "aws" {
     region = "us-east-1"
-    access_key = ""
-    secret_key = ""
+    access_key = "${{ secrets.TF_ACCESS_KEY }}"
+    secret_key = "${{ secrets.TF_SECRET_KEY }}"
 }
 
 resource "aws_ec2_host" "test" {
